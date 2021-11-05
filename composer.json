@@ -1,0 +1,19 @@
+{
+    "description": "",
+    "type": "neos-package",
+    "name": "sitegeist/lostintranslation-csvpo",
+    "require": {
+        "sitegeist/lostintranslation": "*",
+        "sitegeist/csvpo": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Sitegeist\\LostInTranslation\\CsvPO\\": "Classes/"
+        }
+    },
+    "extra": {
+        "neos": {
+            "package-key": "Sitegeist.LostInTranslation.CsvPO"
+        }
+    }
+}
