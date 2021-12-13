@@ -21,10 +21,10 @@ The package finds missing translations, translates them via DeepL API and create
 Those can then be tested and later be baked back to the csv files via commands of the CsvPO package. 
 
 ### General workflow
-1. Use the command `./flow csvpo:translateAll` or  `./flow csvpo:translate` to create new translation definitions.
+1. Use the command `./flow csvpo:translateAll` or  `./flow csvpo:translate` to create new translation definitions. This will create translation overrides that are stored in the database.
 2. Test the new translations !!!
-3. Safe the translations to the csv via `./flow csvpo:bakeAll` or `./flow csvpo:bake` to update the translation csv files. 
-4. Reset then translation overrides again `./flow csvpo:resetAll` or `./flow csvpo:reset`
+3. Write the translations to the csv files `./flow csvpo:bakeAll` or `./flow csvpo:bake` to update the translation csv files. 
+4. Reset then translation overrides `./flow csvpo:resetAll` or `./flow csvpo:reset`
 
 ### Examples of translation commands
 
