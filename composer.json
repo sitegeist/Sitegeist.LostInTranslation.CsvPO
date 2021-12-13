@@ -2,6 +2,7 @@
     "description": "",
     "type": "neos-package",
     "name": "sitegeist/lostintranslation-csvpo",
+    "license": "GPL-3.0-or-later",
     "require": {
         "sitegeist/lostintranslation": "*",
         "sitegeist/csvpo": "*"
