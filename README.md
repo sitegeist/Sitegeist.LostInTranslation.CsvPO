@@ -35,7 +35,7 @@ Those can then be tested and later be baked back to the csv files via commands o
  
 2. Add missing danisch translations to all sources from german but specify deeply locale.
 ```
-./flow csvpo:translateAll de dk --deeplTarget da
+./flow csvpo:translateAll de dk --deepl-target da
 ```
 
 3. Calculate all french translations from german again regardless wether they already exist.
