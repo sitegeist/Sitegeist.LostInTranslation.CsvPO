@@ -4,6 +4,7 @@
     "name": "sitegeist/lostintranslation-csvpo",
     "license": "GPL-3.0-or-later",
     "require": {
+        "php": ">=7.4",
         "sitegeist/lostintranslation": "*",
         "sitegeist/csvpo": "*"
     },
