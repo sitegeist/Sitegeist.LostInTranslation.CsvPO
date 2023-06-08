@@ -92,10 +92,23 @@ class CsvPoCommandController extends CommandController
             return;
         }
 
+        // mask variables with <ignore></ignore>
+        $labelsToTranslate = array_map(
+            fn(string $text) => preg_replace('/(\\{[^\\{\\}]+\\})/u', '<ignore>$0</ignore>', $text),
+            $labelsToTranslate
+        );
+
         $translatedLabels = $this->lostInTranslationService->translate(
             $labelsToTranslate,
             $deeplTarget ?? $target,
             $deeplSource ?? $source
+        );
+
+        // remove <ignore> and </ignore> again,
+        // !!! this is already done in the deepl-service so this here is just for good measure !!!
+        $translatedLabels = array_map(
+            fn(string $text) => preg_replace('/(<ignore>|<\/ignore>)/u', '', $text),
+            $translatedLabels
         );
 
         $this->createOverridesForTranslationLabels($identifier, $target, $translatedLabels);
