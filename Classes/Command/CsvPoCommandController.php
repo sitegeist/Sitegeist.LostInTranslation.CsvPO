@@ -144,7 +144,7 @@ class CsvPoCommandController extends CommandController
                 $targetLocaleChain = $this->localizationService->getLocaleChain(new Locale($targetLanguagIdentifier));
                 $targetTranslation = $translationLabel->findTranslationForLocaleChain($targetLocaleChain);
 
-                if (!$targetTranslation->getOverride() && !$targetTranslation->getTranslation()) {
+                if (!$targetTranslation || (!$targetTranslation->getOverride() && !$targetTranslation->getTranslation())) {
                     $labelsToTranslate[$translationLabel->getIdentifier()] = (string)$sourceTranslationLabel;
                 }
             }
